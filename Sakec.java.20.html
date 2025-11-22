@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>Simple Error Handling Example (with User Input)</h3>
+
+<!-- Input fields -->
+<label>Enter value for a:</label>
+<input type="number" id="inputA"><br><br>
+
+<label>Enter value for b:</label>
+<input type="number" id="inputB"><br><br>
+
+<button onclick="divide()">Divide</button>
+
+<p id="output"></p>
+
+<script>
+function divide() {
+    try {
+        // Get user input
+        let a = Number(document.getElementById("inputA").value);
+        let b = Number(document.getElementById("inputB").value);
+
+        // Validate input
+        if (isNaN(a) || isNaN(b)) {
+            throw "Please enter valid numbers.";
+        }
+
+        if (b === 0) {
+            throw "You cannot divide by ZERO!";
+        }
+
+        let result = a / b;
+        document.getElementById("output").innerHTML = "Result = " + result;
+
+    } catch (error) {
+        document.getElementById("output").innerHTML = "Error: " + error;
+    }
+}
+</script>
+
+</body>
+</html>

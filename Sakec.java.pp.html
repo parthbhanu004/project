@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IETE SAKEC Registration</title>
+</head>
+<body>
+ <div class="container">
+<h1 align="center">IETE SAKEC 2025</h1>
+<p align="center"><img src="PP.jpg" alt="logo" height="200"></p>
+<p align="center">Click below to register for the event.</p>
+<form align="center">
+<fieldset>
+<legend>Enter Student Details</legend>
+<label for="college">Name of College:</label>
+<input type="text" id="college" name="college" placeholder="Enter college name"><br><br>
+<label for="regno">Registration Number:</label>
+<input type="text" id="regno" name="regno" placeholder="Enter registration number"><br><br>
+<label for="name">Student Name:</label>
+<input type="text" id="name" name="name" placeholder="Enter student name"><br><br>
+<label for="year">Year of Joining:</label>
+<input type="number" id="year" name="year" min="2000" max="2025"><br><br>
+<label for="email">Email ID:</label>
+<input type="email" id="email" name="email" placeholder="Enter email"><br><br>
+</fieldset>
+</form>
+<p align="center">  <button onclick="showAlert()">Register Now</button></p>
+</div>
+<script>
+function showAlert() {
+alert("Registration Successful! Check your email for details.");
+}
+</script>
+</body>
+</html>

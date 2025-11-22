@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Calculator</title>
+<style>
+body {
+  background-color: #f4f7fc;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+table {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+  padding: 20px;
+  border-collapse: collapse;
+}
+
+input[type="text"] {
+  width: 100%;
+  height: 50px;
+  text-align: right;
+  font-size: 22px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background-color: #e9eff6;
+  padding-right: 10px;
+}
+
+input[type="button"] {
+  width: 70px;
+  height: 70px;
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #e0e6ed;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+input[type="button"]:hover {
+  background-color: #d1d9e6;
+}
+
+input[type="button"][value="C"] {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+input[type="button"][value="C"]:hover {
+  background-color: #ff4b4b;
+}
+
+input[type="button"][value="="] {
+  background-color: #4caf50;
+  color: white;
+}
+
+input[type="button"][value="="]:hover {
+  background-color: #3e8e41;
+}
+</style>
+</head>
+
+<body>
+<script>
+function pick(val) {
+  document.getElementById("a").value += val;
+}
+
+function solve() {
+  try {
+    var x = document.getElementById("a").value;
+    var y = eval(x);
+    document.getElementById("a").value = y;
+  } catch (err) {
+    document.getElementById("a").value = "Error";
+  }
+}
+
+function clr() {
+  document.getElementById("a").value = "";
+}
+</script>
+
+<table>
+  <tr>
+    <th colspan="3"><input type="text" id="a" readonly></th>
+    <th><input type="button" value="C" onclick="clr()"></th>
+  </tr>
+
+  <tr>
+    <th><input type="button" value="1" onclick="pick('1')"></th>
+    <th><input type="button" value="2" onclick="pick('2')"></th>
+    <th><input type="button" value="3" onclick="pick('3')"></th>
+    <th><input type="button" value="/" onclick="pick('/')"></th>
+  </tr>
+
+  <tr>
+    <th><input type="button" value="4" onclick="pick('4')"></th>
+    <th><input type="button" value="5" onclick="pick('5')"></th>
+    <th><input type="button" value="6" onclick="pick('6')"></th>
+    <th><input type="button" value="*" onclick="pick('*')"></th>
+  </tr>
+
+  <tr>
+    <th><input type="button" value="7" onclick="pick('7')"></th>
+    <th><input type="button" value="8" onclick="pick('8')"></th>
+    <th><input type="button" value="9" onclick="pick('9')"></th>
+    <th><input type="button" value="-" onclick="pick('-')"></th>
+  </tr>
+
+  <tr>
+    <th><input type="button" value="." onclick="pick('.')"></th>
+    <th><input type="button" value="0" onclick="pick('0')"></th>
+    <th><input type="button" value="=" onclick="solve()"></th>
+    <th><input type="button" value="+" onclick="pick('+')"></th>
+  </tr>
+</table>
+</body>
+</html>

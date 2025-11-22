@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Marks Calculator</title>
+
+<script>
+function checkResult() {
+
+// Get values
+var e = parseInt(document.getElementById("eng").value);
+var h = parseInt(document.getElementById("hin").value);
+var s = parseInt(document.getElementById("sci").value);
+var m = parseInt(document.getElementById("mat").value);
+var ss = parseInt(document.getElementById("sst").value);
+
+// Calculate total and percentage
+var total = e + h + s + m + ss;
+var percent = (total / 500) * 100;
+
+// Check pass/fail
+var status = "";
+if (e < 33 || h < 33 || s < 33 || m < 33 || ss < 33) {
+    status = "FAIL";
+} else {
+    status = "PASS";
+}
+
+// Output
+document.getElementById("output").innerHTML =
+"Total Marks: " + total +
+"<br>Percentage: " + percent.toFixed(2) + "%" +
+"<br>Status: " + status;
+
+}
+</script>
+
+</head>
+
+<body>
+<h2>Check Result Status</h2>
+
+English: <input type="text" id="eng"><br><br>
+Hindi: <input type="text" id="hin"><br><br>
+Science: <input type="text" id="sci"><br><br>
+Mathematics: <input type="text" id="mat"><br><br>
+S.S.T: <input type="text" id="sst"><br><br>
+
+<button onclick="checkResult()">Result Status</button>
+
+<p id="output"></p>
+
+</body>
+</html>

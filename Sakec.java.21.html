@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Enter a number</h3>
+
+<script>
+try {
+    let x = prompt("Enter a number:");
+
+    if (isNaN(x)) {
+        throw "This is NOT a number!";
+    }
+
+    document.write("You entered number: " + x);
+
+} catch (err) {
+    document.write("Error: " + err);
+}
+</script>
+
+</body>
+</html>

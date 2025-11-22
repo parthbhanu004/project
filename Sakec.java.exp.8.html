@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Number Checker</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    text-align: center;
+    padding-top: 80px;
+}
+
+h3 {
+    color: #333;
+}
+
+.output-box {
+    margin: 20px auto;
+    padding: 15px;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 18px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h3>Enter a number</h3>
+
+<div class="output-box">
+<script>
+try {
+    let x = prompt("Enter a number:");
+
+    if (isNaN(x)) {
+        throw "This is NOT a number!";
+    }
+
+    document.write("You entered number: " + x);
+
+} catch (err) {
+    document.write("Error: " + err);
+}
+</script>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+HTTP => Hyper Text Transfer Protocol
+WWW => World Wide Web
+HTML => Hyper Text Markup Language
+URL	=> Unifrom Resoure Locator
+
+Domain Codes:
+.com, .in, .co.in, .edu, .net, .org, .gov etc.
+
+<> => HTML tags
+<!DOCTYPE html> => DENOTION OF HTML 5
